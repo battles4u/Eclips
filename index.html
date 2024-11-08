@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eclipse</title>
+  </head>
+  <style>
+    :root {
+      --o: 1;
+    }
+    body {
+      background: rgba(19, 18, 18, var(--o));
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      opacity: 1;
+    }
+    .moon {
+      height: 200px;
+      aspect-ratio: 1;
+      box-shadow: 0 0 2px 0 #fff, -30px 30px#fff;
+      border-radius: 50%;
+      animation: play 5s alternate infinite;
+    }
+
+    @keyframes play {
+      0% {
+        box-shadow: 0 0 2px 0 #fff, -30px 30px 1px 0#fff;
+        --o: 0.5;
+      }
+      50% {
+        box-shadow: 0 0 2px 0 #fff, 0px 0px#fff, 0 0 70px 10px #fff;
+        --o: 1;
+      }
+      100% {
+        box-shadow: 0 0 2px 0 #fff, 30px -30px 1px 0#fff;
+        --o: 0.5;
+      }
+    }
+  </style>
+  <body>
+    <div class="moon"></div>
+  </body>
+</html>
